@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var currentIndex = 0;
 
     function updateSliderPosition() {
-        var offset = -currentIndex * 100; 
+        var offset = -currentIndex * (100 / slideCount);
         slider.style.transform = `translateX(${offset}%)`;
     }
 

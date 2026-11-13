@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const matchesArrival = selectedOptions.arrivals.length === 0 || selectedOptions.arrivals.some(option => itemText.includes(option.toLowerCase()));
 
             if (matchesOccasion && matchesColor && matchesArrival) {
-                item.style.display = 'block';
+                item.classList.remove('hidden');
             } else {
-                item.style.display = 'none';
+                item.classList.add('hidden');
             }
         });
     }

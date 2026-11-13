@@ -4,74 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="./contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.config.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="icon" href="./images/menshop.png">
 </head>
-<body>
-    <header class="nostra__head">
-        <div class="offer" id="offers">
-            <p class="offer-content">Sign Up and <span class="offer_20">GET 20% OFF </span> for your first Order </p><p class="offer__close" id="close">x</p>
+<body class="m-0 box-border list-none font-quicksand scroll-smooth">
+    <header class="nostra__head sticky top-0 z-[100]">
+        <div class="offer flex items-center justify-center bg-[#29293b] text-2xl font-medium text-white max-[600px]:text-base max-[600px]:font-normal" id="offers">
+            <p class="offer-content m-0 mr-10 p-[5px] max-[600px]:mr-[10px] max-[600px]:p-[7px]">Sign Up and <span class="offer_20 font-black max-[600px]:font-bold">GET 20% OFF </span> for your first Order </p><p class="offer__close m-0 cursor-pointer font-semibold max-[600px]:pr-[10px] max-[600px]:text-lg" id="close">x</p>
         </div>
-        <nav class="nav__bar">
-            <h1>Nostra</h1>
-            <ul class="nav__title">
-                <li> <a href="../index.html" style="color: black;text-decoration: none;"> Home</a> </li>
-                <li><a href="../collection/collection.html" style="color: black;text-decoration: none;">Collections</a></li>
-                <li><a href="./contact.html" style="color: black;text-decoration: none;">Contact Us</a></li>
+        <nav class="nav__bar sticky top-0 z-[100] flex items-center justify-between bg-white py-[10px] shadow-[5px_5px_3px_3px_rgba(155,90,155,0.37)]">
+            <h1 class="ml-[10px] cursor-pointer text-2xl font-black">Nostra</h1>
+            <ul class="nav__title m-0 flex list-none gap-5 p-0 pr-[10px] font-bold max-[768px]:hidden">
+                <li class="hover:cursor-pointer hover:underline hover:[text-underline-offset:10px]"> <a class="text-black no-underline" href="../index.html"> Home</a> </li>
+                <li class="hover:cursor-pointer hover:underline hover:[text-underline-offset:10px]"><a class="text-black no-underline" href="../collection/collection.html">Collections</a></li>
+                <li class="hover:cursor-pointer hover:underline hover:[text-underline-offset:10px]"><a class="text-black no-underline" href="./contact.html">Contact Us</a></li>
             </ul>
-            <div class="menu_icon">
-                <i class="fa-solid fa-bars" style="color: #000000;" id="menu"></i>
+            <div class="menu_icon hidden cursor-pointer text-black max-[768px]:mr-[10px] max-[768px]:flex">
+                <i class="fa-solid fa-bars text-black" id="menu"></i>
             </div> 
         </nav>
-        <nav class="nav__titles">
-            <div class="nav__titles2">
-                <h2 class="title-close" id="title-closing">X</h2>
+        <nav class="nav__titles fixed right-[-50%] top-[7%] z-[101] hidden h-fit w-1/2 bg-[rgba(67,63,105,0.733)] p-[10px] text-white transition-[right] duration-1000 max-[768px]:block">
+            <div class="nav__titles2 flex justify-end">
+                <h2 class="title-close m-0 hidden cursor-pointer text-right text-2xl font-bold text-black max-[768px]:block" id="title-closing">X</h2>
             </div>
-            <ul>
-                <li> <a href="../index.html" style="color: white;text-decoration: none;"> Home</a> </li>
-                <li><a href="../collection/collection.html" style="color: rgb(255, 255, 255);text-decoration: none;">Collections</a></li>
-                <li><a href="./contact.html" style="color: white;text-decoration: none;">Contact Us</a></li>
+            <ul class="m-0 list-none p-0">
+                <li class="p-[10px]"> <a class="text-white no-underline" href="../index.html"> Home</a> </li>
+                <li class="p-[10px]"><a class="text-white no-underline" href="../collection/collection.html">Collections</a></li>
+                <li class="p-[10px]"><a class="text-white no-underline" href="./contact.html">Contact Us</a></li>
             </ul>
         </nav>
        
     </header>
-    <main class="contact-main">
-        <h3 class="contact__title">Contact Form</h3>
+    <main class="contact-main flex flex-col items-center">
+        <h3 class="contact__title m-5 text-[xx-large] font-bold">Contact Form</h3>
 
-    <div class="container">
+    <div class="container w-[calc(100%-2rem)] max-w-3xl rounded-[5px] bg-[#afadad] p-5">
         <form action="">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="fname" class="block">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." class="mb-4 mt-[6px] w-full resize-y rounded border border-[#ccc] p-3">
 
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="lname" class="block">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." class="mb-4 mt-[6px] w-full resize-y rounded border border-[#ccc] p-3">
 
-            <label for="country">Country</label>
-            <select id="country" name="country">
+            <label for="country" class="block">Country</label>
+            <select id="country" name="country" class="mb-4 mt-[6px] w-full resize-y rounded border border-[#ccc] p-3">
             <option value="australia">Australia</option>
             <option value="canada">Canada</option>
             <option value="usa">USA</option>
             </select>
 
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+            <label for="subject" class="block">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." class="mb-4 mt-[6px] h-[100px] w-full resize-y rounded border border-[#ccc] p-3"></textarea>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="cursor-pointer rounded bg-[#6261c4] px-5 py-3 text-white hover:bg-[#5d6ecc]">
         </form>
     </div>
     </main>
-    <footer class="footer-container">
-        <div class="footer-content">
-            <h2 class="footer-title">Nostra</h2>
-            <p class="footer-text">The standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interested.</p>
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+    <footer class="footer-container h-[150px] bg-[#29293b] text-center text-white max-[600px]:h-[200px]">
+        <div class="footer-content my-5">
+            <h2 class="footer-title m-0 text-2xl font-bold">Nostra</h2>
+            <p class="footer-text m-0">The standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interested.</p>
+            <div class="social-icons my-5">
+                <a href="#" class="social-icon p-[10px] text-2xl text-white"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="social-icon p-[10px] text-2xl text-white"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="social-icon p-[10px] text-2xl text-white"><i class="bx bxl-facebook"></i></a>
             </div>
-            <p class="footer-copyright">© 2023 Nostra.com</p>
+            <p class="footer-copyright m-0 flex items-start">© 2023 Nostra.com</p>
         </div>
     </footer>      
     <script src="./contact.js"></script>
